@@ -64,10 +64,7 @@ public class FoodCategory extends Model {
             return false;
         }
         final FoodCategory other = (FoodCategory) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
+        return this.id == other.id;
     }
 
 }

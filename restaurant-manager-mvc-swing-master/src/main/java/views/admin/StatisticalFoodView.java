@@ -35,7 +35,7 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         initComponents();
         tblData.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
         tblData.getTableHeader().setOpaque(false);
-        tblData.getTableHeader().setBackground(new Color(51, 175, 255));
+        tblData.getTableHeader().setBackground(new Color(170, 162, 242));
         tblData.getTableHeader().setForeground(new Color(255, 255, 255));
         ((DefaultTableCellRenderer) tblData.getTableHeader().getDefaultRenderer())
                 .setHorizontalAlignment(JLabel.LEFT);
@@ -90,7 +90,8 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         try {
             for (Statistical.ProductIncome item : tableData) {
                 tableModel.addRow(new Object[]{
-                    item.id,
+                    
+                    item.name,
                     item.quantity
                 });
             }

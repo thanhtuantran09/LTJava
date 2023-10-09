@@ -44,8 +44,12 @@ public class StatisticalFoodController {
         addEvent();
     }
 
+
     public void setView(StatisticalFoodView view) {
-        this.view = view;
+         if (view != this.view) {
+            this.view = view;
+            addEvent();
+        }
     }
 
     public void addEvent() {

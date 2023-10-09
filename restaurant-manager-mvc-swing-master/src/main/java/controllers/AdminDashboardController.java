@@ -121,7 +121,7 @@ public class AdminDashboardController {
         menuQLDH.addSubMenu(new MenuItem("QLGH", im.getIcon("truck_25px.png"), "Quản lý giao hàng"));
         menuTK.addSubMenu(new MenuItem("TKNV", im.getIcon("user_25px.png"), "Thống kê nhân viên"));
         menuTK.addSubMenu(new MenuItem("TKDT",im.getIcon("bank-solid-24.png"), "Thống kê doanh thu"));
-        menuTK.addSubMenu(new MenuItem("QLDA", im.getIcon("food_25px.png"), "Thống số lượng hàng bán"));
+        menuTK.addSubMenu(new MenuItem("QLDA", im.getIcon("food_25px.png"), "Thống kê hàng bán"));
         menuTL.addSubMenu(new MenuItem("TTCN", im.getIcon("about_25px.png"), "Thông tin cá nhân"));
         menuTL.addSubMenu(new MenuItem("TLGD", im.getIcon("contrast_25px.png"), "Giao diện"));
         menuTL.addSubMenu(new MenuItem("TT", im.getIcon("help_25px.png"), "About us"));
