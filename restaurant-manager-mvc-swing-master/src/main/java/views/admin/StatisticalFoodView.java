@@ -117,7 +117,7 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         cbxCategory = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(118, 215, 196));
+        setBackground(new java.awt.Color(255, 228, 225));
         setPreferredSize(new java.awt.Dimension(1008, 680));
 
         tblData.setModel(new javax.swing.table.DefaultTableModel(

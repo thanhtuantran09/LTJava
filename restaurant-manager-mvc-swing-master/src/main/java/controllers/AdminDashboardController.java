@@ -37,11 +37,9 @@ import views.admin.StatisticalView;
 import views.admin.TableManagerView;
 import views.employee.InformationView;
 
-/**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
+import views.admin.StatisticalFoodView;
+import controllers.admin.StatisticalFoodController;
+
 public class AdminDashboardController {
 
     private AdminDashboardView view;
@@ -56,7 +54,9 @@ public class AdminDashboardController {
     StatisticalIncomeController statisticalIncomeController = new StatisticalIncomeController();
     StatisticalEmployeeController statisticalEmployeeController = new StatisticalEmployeeController();
     InformationController informationController = new InformationController();
-
+    
+    StatisticalFoodController statisticalFoodController =new StatisticalFoodController();
+            
     HomeView homeView = new HomeView();
     ManagerPaneView employeeManagerView = new EmployeeManagerView(), // View
             tableManagerView = new TableManagerView(),
@@ -68,13 +68,16 @@ public class AdminDashboardController {
     StatisticalView statisticalView = new StatisticalView();
     StatisticalIncomeView statisticalIncomeView = new StatisticalIncomeView();
     StatisticalEmployeeView statisticalEmployeeView = new StatisticalEmployeeView();
+    
+    StatisticalFoodView statisticalFoodView =new StatisticalFoodView();
+    
     AboutView aboutView = new AboutView();
     InformationView informationView = new InformationView();
     JPanel[] cards = {
         homeView, employeeManagerView, tableManagerView, customerManagerView,
         foodCategoryManagerView, orderManagerView, foodItemManagerView, shipmentManagerView,
         statisticalView, statisticalIncomeView, statisticalEmployeeView,
-        aboutView, informationView
+        aboutView, informationView,statisticalFoodView,
     };
 
     SideBarController sideBarController = new SideBarController();
@@ -111,12 +114,14 @@ public class AdminDashboardController {
         MenuItem menuTL = new MenuItem("TL", im.getIcon("settings_25px.png"), "Thiết lập");
         menuQLHH.addSubMenu(new MenuItem("QLLM", im.getIcon("food-menu-25px.png"), "Quản lý loại món"));
         menuQLHH.addSubMenu(new MenuItem("QLMA", im.getIcon("food_25px.png"), "Quản lý món ăn"));
+        
         menuQLDH.addSubMenu(new MenuItem("QLB", im.getIcon("table_25px.png"), "Quản lý bàn"));
         menuQLDH.addSubMenu(new MenuItem("QLKH", im.getIcon("technical_support_25px.png"), "Quản lý khách hàng"));
         menuQLDH.addSubMenu(new MenuItem("QLDDH", im.getIcon("purchase_order_25px.png"), "Quản lý đơn đặt hàng"));
         menuQLDH.addSubMenu(new MenuItem("QLGH", im.getIcon("truck_25px.png"), "Quản lý giao hàng"));
         menuTK.addSubMenu(new MenuItem("TKNV", im.getIcon("user_25px.png"), "Thống kê nhân viên"));
         menuTK.addSubMenu(new MenuItem("TKDT",im.getIcon("bank-solid-24.png"), "Thống kê doanh thu"));
+        menuTK.addSubMenu(new MenuItem("QLDA", im.getIcon("food_25px.png"), "Thống số lượng hàng bán"));
         menuTL.addSubMenu(new MenuItem("TTCN", im.getIcon("about_25px.png"), "Thông tin cá nhân"));
         menuTL.addSubMenu(new MenuItem("TLGD", im.getIcon("contrast_25px.png"), "Giao diện"));
         menuTL.addSubMenu(new MenuItem("TT", im.getIcon("help_25px.png"), "About us"));
@@ -181,6 +186,7 @@ public class AdminDashboardController {
                 shipmentManagerController.setView(shipmentManagerView);
                 shipmentManagerController.updateData();
                 break;
+           
             case "QLHH":
             case "QLDH":
             case "TL":
@@ -199,6 +205,11 @@ public class AdminDashboardController {
                 view.setPanel(statisticalIncomeView);
                 statisticalIncomeController.setView(statisticalIncomeView);
                 statisticalIncomeController.initData();
+                break;
+            case "QLDA"://Quản lý đồ ăn
+                 view.setPanel(statisticalFoodView);
+                statisticalFoodController.setView(statisticalFoodView);
+                statisticalFoodController.init();
                 break;
             case "TT":
                 view.setPanel(aboutView);
