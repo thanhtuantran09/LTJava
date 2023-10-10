@@ -11,11 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import utils.ErrorPopup;
 
-/**
- * createAt Dec 16, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
+
 public class FoodCategoryPopupView extends javax.swing.JFrame implements PopupView {
 
     public FoodCategoryPopupView() {
@@ -23,14 +19,17 @@ public class FoodCategoryPopupView extends javax.swing.JFrame implements PopupVi
         setLocationRelativeTo(null);
     }
 
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
@@ -99,14 +98,17 @@ public class FoodCategoryPopupView extends javax.swing.JFrame implements PopupVi
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }

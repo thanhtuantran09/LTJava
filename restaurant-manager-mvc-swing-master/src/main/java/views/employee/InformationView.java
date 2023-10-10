@@ -70,6 +70,7 @@ public class InformationView extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(170, 680));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
+        btnChangePass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnChangePass.setText("Đổi mật khẩu");
         btnChangePass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -82,6 +83,7 @@ public class InformationView extends javax.swing.JPanel {
         gridBagConstraints.weighty = 0.1;
         jPanel1.add(btnChangePass, gridBagConstraints);
 
+        btnHistoryLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnHistoryLogin.setText("Lịch sử đăng nhập");
         btnHistoryLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gridBagConstraints = new java.awt.GridBagConstraints();

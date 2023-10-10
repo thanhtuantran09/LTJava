@@ -7,12 +7,8 @@ import models.FoodItem;
 import models.OrderItem;
 import utils.ImageManager;
 
-/**
- * createAt Dec 13, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
-public class OrderItemPane extends javax.swing.JPanel {
+
+public final class OrderItemPane extends javax.swing.JPanel {
 
     OrderItem orderItem;
     ImageManager im = new ImageManager();

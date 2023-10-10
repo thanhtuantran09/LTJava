@@ -146,12 +146,13 @@ public class CalendarView extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(725, 578));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(209, 242, 235));
+        jPanel2.setBackground(new java.awt.Color(170, 162, 242));
         jPanel2.setMaximumSize(new java.awt.Dimension(470, 32));
         jPanel2.setMinimumSize(new java.awt.Dimension(470, 32));
         jPanel2.setPreferredSize(new java.awt.Dimension(470, 32));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lịch công");
@@ -342,7 +343,7 @@ public class CalendarView extends javax.swing.JPanel {
         jPanel16.setBackground(new java.awt.Color(243, 156, 18));
         jPanel16.setMaximumSize(new java.awt.Dimension(100, 100));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer_50px.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/time-five-regular-48.png"))); // NOI18N
         jLabel15.setName(""); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -350,16 +351,16 @@ public class CalendarView extends javax.swing.JPanel {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(jLabel15)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(24, 24, 24))
         );
 
         jPanel14.add(jPanel16, java.awt.BorderLayout.LINE_START);

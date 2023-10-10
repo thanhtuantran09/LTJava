@@ -6,10 +6,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import utils.ErrorPopup;
 
-/**
- * @createAt Nov 28, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
- */
+
 public class TablePopupView extends javax.swing.JFrame implements PopupView {
 
     public TablePopupView() {
@@ -17,26 +14,32 @@ public class TablePopupView extends javax.swing.JFrame implements PopupView {
         setLocationRelativeTo(null);
     }
 
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }

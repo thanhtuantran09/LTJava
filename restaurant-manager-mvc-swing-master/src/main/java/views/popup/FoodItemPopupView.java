@@ -14,11 +14,7 @@ import javax.swing.JTextField;
 import models.FoodCategory;
 import utils.ErrorPopup;
 
-/**
- * createAt Dec 16, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
+
 public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
 
     DefaultComboBoxModel<FoodCategory> foodCategoryComboBoxModel = new DefaultComboBoxModel<>();
@@ -29,18 +25,22 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         cboCategory.setModel(foodCategoryComboBoxModel);
     }
 
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
@@ -57,6 +57,7 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         this.btnChooseImage = btnChooseImage;
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
@@ -73,6 +74,7 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         this.cboCategory = cboCategory;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }

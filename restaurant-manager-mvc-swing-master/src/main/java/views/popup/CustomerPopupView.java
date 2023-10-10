@@ -13,11 +13,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import utils.ErrorPopup;
 
-/**
- * createAt Dec 16, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
+
 public class CustomerPopupView extends javax.swing.JFrame implements PopupView {
 
     public CustomerPopupView() {
@@ -25,22 +21,27 @@ public class CustomerPopupView extends javax.swing.JFrame implements PopupView {
         setLocationRelativeTo(null);
     }
 
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
@@ -49,6 +50,7 @@ public class CustomerPopupView extends javax.swing.JFrame implements PopupView {
         return cbUnknownBirthday;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }

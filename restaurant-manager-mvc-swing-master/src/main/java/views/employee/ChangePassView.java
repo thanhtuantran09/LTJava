@@ -131,7 +131,7 @@ public class ChangePassView extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(194, 50));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        btnConfirm.setBackground(new java.awt.Color(255, 228, 214));
+        btnConfirm.setBackground(new java.awt.Color(255, 228, 225));
         btnConfirm.setText("Xác nhận");
         btnConfirm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfirm.setSelected(true);
@@ -161,7 +161,7 @@ public class ChangePassView extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
-        jPanel4.setBackground(new java.awt.Color(255, 228, 214));
+        jPanel4.setBackground(new java.awt.Color(255, 228, 225));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setBackground(new java.awt.Color(41, 207, 124));

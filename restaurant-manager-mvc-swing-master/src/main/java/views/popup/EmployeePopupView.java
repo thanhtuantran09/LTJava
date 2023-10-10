@@ -8,10 +8,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import utils.ErrorPopup;
 
-/**
- * @createAt Nov 16, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
- */
+
 public class EmployeePopupView extends javax.swing.JFrame implements PopupView {
 
     public EmployeePopupView() {
@@ -19,22 +16,27 @@ public class EmployeePopupView extends javax.swing.JFrame implements PopupView {
         setLocationRelativeTo(null);
     }
 
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
@@ -63,6 +65,7 @@ public class EmployeePopupView extends javax.swing.JFrame implements PopupView {
         return txtUsername;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }

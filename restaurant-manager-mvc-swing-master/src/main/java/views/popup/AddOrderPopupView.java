@@ -14,11 +14,7 @@ import javax.swing.JSpinner;
 import models.Table;
 import utils.ErrorPopup;
 
-/**
- * createAt Dec 20, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- */
+
 public class AddOrderPopupView extends javax.swing.JFrame implements PopupView {
 
     DefaultComboBoxModel<Table> tbComboBoxModel = new DefaultComboBoxModel<>();
@@ -152,10 +148,12 @@ public class AddOrderPopupView extends javax.swing.JFrame implements PopupView {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnOKActionPerformed
 
+    @Override
     public JButton getBtnCancel() {
         return btnCancel;
     }
 
+    @Override
     public JButton getBtnOK() {
         return btnOK;
     }
@@ -168,6 +166,7 @@ public class AddOrderPopupView extends javax.swing.JFrame implements PopupView {
         return cboType;
     }
 
+    @Override
     public JLabel getLbTitle() {
         return lbTitle;
     }
@@ -191,14 +190,17 @@ public class AddOrderPopupView extends javax.swing.JFrame implements PopupView {
     private javax.swing.JLabel lbTitle;
     private javax.swing.JSpinner spnDiscount;
     // End of variables declaration//GEN-END:variables
+    @Override
     public void showError(String message) {
         ErrorPopup.show(new Exception(message));
     }
 
+    @Override
     public void showError(Exception e) {
         ErrorPopup.show(e);
     }
 
+    @Override
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
