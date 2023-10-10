@@ -74,7 +74,7 @@ public class StatisticalEmployeeView extends javax.swing.JPanel {
 
     private void setupHeader(JTable t) {
         t.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
-        t.getTableHeader().setBackground(new Color(51, 175, 255));
+        t.getTableHeader().setBackground(new Color(170, 162, 242));
         t.getTableHeader().setForeground(new Color(255, 255, 255));
         ((DefaultTableCellRenderer) t.getTableHeader().getDefaultRenderer())
                 .setHorizontalAlignment(JLabel.LEFT);
@@ -142,6 +142,7 @@ public class StatisticalEmployeeView extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1008, 40));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
+        jPanel2.setBackground(new java.awt.Color(255, 228, 225));
         jPanel2.setPreferredSize(new java.awt.Dimension(500, 40));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 5, 8);
         flowLayout1.setAlignOnBaseline(true);
@@ -163,6 +164,7 @@ public class StatisticalEmployeeView extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_END);
 
+        jPanel6.setBackground(new java.awt.Color(255, 228, 225));
         jPanel6.setPreferredSize(new java.awt.Dimension(500, 40));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -182,6 +184,7 @@ public class StatisticalEmployeeView extends javax.swing.JPanel {
 
         jPanel3.setLayout(new java.awt.BorderLayout());
 
+        jPanel4.setBackground(new java.awt.Color(255, 228, 225));
         jPanel4.setPreferredSize(new java.awt.Dimension(504, 640));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
@@ -223,6 +226,7 @@ public class StatisticalEmployeeView extends javax.swing.JPanel {
 
         jPanel3.add(jPanel4, java.awt.BorderLayout.WEST);
 
+        jPanel5.setBackground(new java.awt.Color(255, 228, 225));
         jPanel5.setPreferredSize(new java.awt.Dimension(504, 640));
         jPanel5.setLayout(new java.awt.GridBagLayout());
 

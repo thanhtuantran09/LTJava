@@ -62,7 +62,7 @@ public class StatisticalIncomeView extends javax.swing.JPanel {
 
     private void setupHeader(JTable t) {
         t.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
-        t.getTableHeader().setBackground(new Color(51, 175, 255));
+        t.getTableHeader().setBackground(new Color(170, 162, 242));
         t.getTableHeader().setForeground(new Color(255, 255, 255));
         ((DefaultTableCellRenderer) t.getTableHeader().getDefaultRenderer())
                 .setHorizontalAlignment(JLabel.LEFT);
@@ -119,6 +119,7 @@ public class StatisticalIncomeView extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
+        jPanel14.setBackground(new java.awt.Color(255, 228, 225));
         jPanel14.setPreferredSize(new java.awt.Dimension(1008, 40));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 5, 8);
         flowLayout1.setAlignOnBaseline(true);
@@ -146,6 +147,7 @@ public class StatisticalIncomeView extends javax.swing.JPanel {
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
+        jPanel2.setBackground(new java.awt.Color(255, 228, 225));
         jPanel2.setPreferredSize(new java.awt.Dimension(504, 640));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
@@ -187,6 +189,7 @@ public class StatisticalIncomeView extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.WEST);
 
+        jPanel4.setBackground(new java.awt.Color(255, 228, 225));
         jPanel4.setPreferredSize(new java.awt.Dimension(504, 640));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 

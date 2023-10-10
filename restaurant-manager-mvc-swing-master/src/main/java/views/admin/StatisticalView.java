@@ -105,6 +105,7 @@ public class StatisticalView extends javax.swing.JPanel {
         jPanel13.setPreferredSize(new java.awt.Dimension(1008, 150));
         jPanel13.setLayout(new java.awt.BorderLayout());
 
+        jPanel14.setBackground(new java.awt.Color(255, 228, 225));
         jPanel14.setPreferredSize(new java.awt.Dimension(1008, 40));
         java.awt.FlowLayout flowLayout2 = new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT);
         flowLayout2.setAlignOnBaseline(true);
@@ -130,6 +131,7 @@ public class StatisticalView extends javax.swing.JPanel {
 
         jPanel13.add(jPanel14, java.awt.BorderLayout.PAGE_START);
 
+        pnlHead.setBackground(new java.awt.Color(255, 228, 225));
         pnlHead.setPreferredSize(new java.awt.Dimension(1008, 110));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEFT);
         flowLayout1.setAlignOnBaseline(true);
@@ -363,6 +365,7 @@ public class StatisticalView extends javax.swing.JPanel {
 
         add(jPanel13, java.awt.BorderLayout.PAGE_START);
 
+        pnlContent.setBackground(new java.awt.Color(255, 228, 225));
         pnlContent.setPreferredSize(new java.awt.Dimension(1008, 530));
         pnlContent.setLayout(new java.awt.CardLayout());
         add(pnlContent, java.awt.BorderLayout.CENTER);
