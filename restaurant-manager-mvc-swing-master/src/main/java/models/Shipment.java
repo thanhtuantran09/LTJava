@@ -3,6 +3,9 @@ package models;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import utils.ShipmentStatus;
 
 public class Shipment extends Model {
@@ -35,7 +38,37 @@ public class Shipment extends Model {
     }
 
     public String getShipperName() {
-        return shipperName = "Huy";
+        if(shipperName==null){
+            
+        Random rand = new Random();
+        
+        int randomNum = rand.nextInt((3 - 1) + 1) + 1;
+        switch(randomNum) {
+        case 1 -> {
+            shipperName="ShoppeeFood";
+            }
+        case 2 -> {
+            shipperName="GrabFood";
+            }
+        case 3 -> {
+            shipperName="Gojek";
+            }
+        case 4 -> {
+            shipperName="Beamin";
+            }
+  
+        }
+
+        List<String> list = new ArrayList<String>();
+        list.add("ShoppeeFood");
+        list.add("GrabFood");
+        list.add("Beamin");
+        list.add("Gojek");
+        shipperName = list.get(new Random().nextInt(list.size()));
+            
+        }              
+    
+        return shipperName ;
     }
 
     public void setShipperName(String shipperName) {
@@ -43,7 +76,26 @@ public class Shipment extends Model {
     }
 
     public String getShipperPhoneNumber() {
-        return shipperPhoneNumber = "012356789";
+        if(shipperPhoneNumber==null){
+            
+            Random rand = new Random();
+            int num2, num3;
+            List<String> list = new ArrayList<String>();
+            list.add("077");
+            list.add("038");
+            list.add("033");
+            list.add("088");
+            list.add("089");
+            list.add("035");
+            list.add("084");
+            list.add("090");
+            list.add("093");
+            String num1 = list.get(new Random().nextInt(list.size()));
+            num2 = rand.nextInt (999) + 100;
+            num3 = rand.nextInt (9999) + 1000;
+            shipperPhoneNumber=num1+num2+num3;
+        }              
+        return shipperPhoneNumber;
     }
 
     public void setShipperPhoneNumber(String shipperPhoneNumber) {
