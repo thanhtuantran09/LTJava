@@ -95,12 +95,12 @@ public class LoginController {
         });
         view.getLblForgotPassword().addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                view.showMessage("Chưa hỗ trợ!");
+                view.showMessage("Liên hệ Admin để được hỗ trợ!");
             }
         });
         view.getLblRegister().addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                view.showMessage("Chưa hỗ trợ!");
+                view.showMessage("Liên hệ Admin để tạo tài khoản!");
             }
         });
     }
