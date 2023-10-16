@@ -9,7 +9,7 @@ public class LoadConfig {
 
     private static final String CONFIG_PATH = "/config.properties";
     private static LoadConfig intanse;
-    private Properties properties = new Properties();
+    private final Properties properties = new Properties();
 
     public LoadConfig() {
         readConfig();

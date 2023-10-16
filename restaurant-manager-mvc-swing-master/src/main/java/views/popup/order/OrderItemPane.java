@@ -57,11 +57,11 @@ public final class OrderItemPane extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         lbIcon = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        RightBackground = new javax.swing.JPanel();
         btnMinus = new javax.swing.JButton();
         btnPlus = new javax.swing.JButton();
         spnQuantity = new javax.swing.JSpinner();
-        jPanel3 = new javax.swing.JPanel();
+        MiddleBackground = new javax.swing.JPanel();
         lbFoodName = new javax.swing.JLabel();
         lbToppingName = new javax.swing.JLabel();
         lbPrice = new javax.swing.JLabel();
@@ -88,9 +88,9 @@ public final class OrderItemPane extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setOpaque(false);
-        jPanel2.setPreferredSize(new java.awt.Dimension(125, 75));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        RightBackground.setOpaque(false);
+        RightBackground.setPreferredSize(new java.awt.Dimension(125, 75));
+        RightBackground.setLayout(new java.awt.GridBagLayout());
 
         btnMinus.setText("-");
         btnMinus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -104,7 +104,7 @@ public final class OrderItemPane extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnMinus, gridBagConstraints);
+        RightBackground.add(btnMinus, gridBagConstraints);
 
         btnPlus.setText("+");
         btnPlus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,18 +118,18 @@ public final class OrderItemPane extends javax.swing.JPanel {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnPlus, gridBagConstraints);
+        RightBackground.add(btnPlus, gridBagConstraints);
 
         spnQuantity.setPreferredSize(new java.awt.Dimension(50, 22));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-        jPanel2.add(spnQuantity, gridBagConstraints);
+        RightBackground.add(spnQuantity, gridBagConstraints);
 
-        add(jPanel2, java.awt.BorderLayout.LINE_END);
+        add(RightBackground, java.awt.BorderLayout.LINE_END);
 
-        jPanel3.setOpaque(false);
-        jPanel3.setPreferredSize(new java.awt.Dimension(300, 75));
+        MiddleBackground.setOpaque(false);
+        MiddleBackground.setPreferredSize(new java.awt.Dimension(300, 75));
 
         lbFoodName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbFoodName.setText("Trà Sữa Trân Châu Khổng Lồ");
@@ -144,17 +144,17 @@ public final class OrderItemPane extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("VND");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout MiddleBackgroundLayout = new javax.swing.GroupLayout(MiddleBackground);
+        MiddleBackground.setLayout(MiddleBackgroundLayout);
+        MiddleBackgroundLayout.setHorizontalGroup(
+            MiddleBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MiddleBackgroundLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(MiddleBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MiddleBackgroundLayout.createSequentialGroup()
                         .addComponent(lbFoodName)
                         .addGap(0, 88, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(MiddleBackgroundLayout.createSequentialGroup()
                         .addComponent(lbToppingName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbPrice)
@@ -162,20 +162,20 @@ public final class OrderItemPane extends javax.swing.JPanel {
                         .addComponent(jLabel5)))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        MiddleBackgroundLayout.setVerticalGroup(
+            MiddleBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MiddleBackgroundLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbFoodName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MiddleBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbToppingName)
                     .addComponent(lbPrice)
                     .addComponent(jLabel5))
                 .addContainerGap())
         );
 
-        add(jPanel3, java.awt.BorderLayout.CENTER);
+        add(MiddleBackground, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
@@ -189,12 +189,12 @@ public final class OrderItemPane extends javax.swing.JPanel {
     }//GEN-LAST:event_btnPlusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel MiddleBackground;
+    private javax.swing.JPanel RightBackground;
     private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnPlus;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lbFoodName;
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbPrice;

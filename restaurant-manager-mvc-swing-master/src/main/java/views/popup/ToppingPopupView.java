@@ -64,33 +64,33 @@ public class ToppingPopupView extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        MidBackground = new javax.swing.JPanel();
+        NameFood = new javax.swing.JLabel();
         lbFoodName = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        SumPrice = new javax.swing.JLabel();
+        Quantity = new javax.swing.JLabel();
         btnMinus = new javax.swing.JButton();
         btnPlus = new javax.swing.JButton();
-        VND = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        BelowVNĐ = new javax.swing.JLabel();
+        PriceFood = new javax.swing.JLabel();
         cboTopping = new javax.swing.JComboBox<>();
         spnQuantity = new javax.swing.JSpinner();
         spnFoodPrice = new javax.swing.JSpinner();
         lbTopping = new javax.swing.JLabel();
         lbAmount = new javax.swing.JLabel();
-        VND1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        AboveVNĐ = new javax.swing.JLabel();
+        TopBackground = new javax.swing.JPanel();
+        NameBill = new javax.swing.JLabel();
+        BotBackground = new javax.swing.JPanel();
         btnOK = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        MidBackground.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("Tên món:");
+        NameFood.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        NameFood.setText("Tên món:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -98,7 +98,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 15);
-        jPanel1.add(jLabel2, gridBagConstraints);
+        MidBackground.add(NameFood, gridBagConstraints);
 
         lbFoodName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbFoodName.setForeground(new java.awt.Color(102, 51, 255));
@@ -110,19 +110,19 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel1.add(lbFoodName, gridBagConstraints);
+        MidBackground.add(lbFoodName, gridBagConstraints);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setText("Tổng Tiền:");
+        SumPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SumPrice.setText("Tổng Tiền:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 15);
-        jPanel1.add(jLabel3, gridBagConstraints);
+        MidBackground.add(SumPrice, gridBagConstraints);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Số Lượng:");
+        Quantity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Quantity.setText("Số Lượng:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -130,7 +130,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 15);
-        jPanel1.add(jLabel5, gridBagConstraints);
+        MidBackground.add(Quantity, gridBagConstraints);
 
         btnMinus.setText("-");
         btnMinus.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +143,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 0);
-        jPanel1.add(btnMinus, gridBagConstraints);
+        MidBackground.add(btnMinus, gridBagConstraints);
 
         btnPlus.setText("+");
         btnPlus.addActionListener(new java.awt.event.ActionListener() {
@@ -156,19 +156,19 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 5);
-        jPanel1.add(btnPlus, gridBagConstraints);
+        MidBackground.add(btnPlus, gridBagConstraints);
 
-        VND.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        VND.setText("VND");
+        BelowVNĐ.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BelowVNĐ.setText("VNĐ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel1.add(VND, gridBagConstraints);
+        MidBackground.add(BelowVNĐ, gridBagConstraints);
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setText("Giá Món:");
+        PriceFood.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        PriceFood.setText("Giá Món:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -176,7 +176,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 15);
-        jPanel1.add(jLabel7, gridBagConstraints);
+        MidBackground.add(PriceFood, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -185,7 +185,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 0);
-        jPanel1.add(cboTopping, gridBagConstraints);
+        MidBackground.add(cboTopping, gridBagConstraints);
 
         spnQuantity.setModel(new javax.swing.SpinnerNumberModel(1, 1, 99, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -194,7 +194,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 0);
-        jPanel1.add(spnQuantity, gridBagConstraints);
+        MidBackground.add(spnQuantity, gridBagConstraints);
 
         spnFoodPrice.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1000));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -204,7 +204,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 0);
-        jPanel1.add(spnFoodPrice, gridBagConstraints);
+        MidBackground.add(spnFoodPrice, gridBagConstraints);
 
         lbTopping.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbTopping.setText("Topping:");
@@ -215,7 +215,7 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 15);
-        jPanel1.add(lbTopping, gridBagConstraints);
+        MidBackground.add(lbTopping, gridBagConstraints);
 
         lbAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbAmount.setForeground(new java.awt.Color(255, 0, 0));
@@ -227,10 +227,10 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel1.add(lbAmount, gridBagConstraints);
+        MidBackground.add(lbAmount, gridBagConstraints);
 
-        VND1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        VND1.setText("VND");
+        AboveVNĐ.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        AboveVNĐ.setText("VNĐ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
@@ -238,33 +238,33 @@ public class ToppingPopupView extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel1.add(VND1, gridBagConstraints);
+        MidBackground.add(AboveVNĐ, gridBagConstraints);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(MidBackground, java.awt.BorderLayout.CENTER);
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(440, 40));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        TopBackground.setPreferredSize(new java.awt.Dimension(440, 40));
+        TopBackground.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Hóa đơn 01 - Thêm món");
-        jPanel2.add(jLabel1, new java.awt.GridBagConstraints());
+        NameBill.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NameBill.setText("Hóa đơn 01 - Thêm món");
+        TopBackground.add(NameBill, new java.awt.GridBagConstraints());
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(TopBackground, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(440, 60));
-        jPanel3.setLayout(new java.awt.GridBagLayout());
+        BotBackground.setPreferredSize(new java.awt.Dimension(440, 60));
+        BotBackground.setLayout(new java.awt.GridBagLayout());
 
         btnOK.setText("Thêm");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.weightx = 0.1;
-        jPanel3.add(btnOK, gridBagConstraints);
+        BotBackground.add(btnOK, gridBagConstraints);
 
         btnCancel.setText("Hủy");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.weightx = 0.1;
-        jPanel3.add(btnCancel, gridBagConstraints);
+        BotBackground.add(btnCancel, gridBagConstraints);
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(BotBackground, java.awt.BorderLayout.PAGE_END);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -280,21 +280,21 @@ public class ToppingPopupView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel VND;
-    private javax.swing.JLabel VND1;
+    private javax.swing.JLabel AboveVNĐ;
+    private javax.swing.JLabel BelowVNĐ;
+    private javax.swing.JPanel BotBackground;
+    private javax.swing.JPanel MidBackground;
+    private javax.swing.JLabel NameBill;
+    private javax.swing.JLabel NameFood;
+    private javax.swing.JLabel PriceFood;
+    private javax.swing.JLabel Quantity;
+    private javax.swing.JLabel SumPrice;
+    private javax.swing.JPanel TopBackground;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnOK;
     private javax.swing.JButton btnPlus;
     private javax.swing.JComboBox<FoodItem> cboTopping;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lbAmount;
     private javax.swing.JLabel lbFoodName;
     private javax.swing.JLabel lbTopping;

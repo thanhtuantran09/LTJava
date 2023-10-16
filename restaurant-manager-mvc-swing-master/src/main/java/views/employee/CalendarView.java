@@ -396,7 +396,7 @@ public class CalendarView extends javax.swing.JPanel {
         jPanel25.setPreferredSize(new java.awt.Dimension(245, 100));
         jPanel25.setLayout(new java.awt.BorderLayout());
 
-        jPanel26.setBackground(new java.awt.Color(243, 156, 18));
+        jPanel26.setBackground(new java.awt.Color(200, 150, 200));
         jPanel26.setMaximumSize(new java.awt.Dimension(100, 100));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer_50px.png"))); // NOI18N

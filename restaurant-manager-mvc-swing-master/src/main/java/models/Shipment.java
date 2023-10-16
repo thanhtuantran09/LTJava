@@ -35,7 +35,7 @@ public class Shipment extends Model {
     }
 
     public String getShipperName() {
-        return shipperName;
+        return shipperName = "Huy";
     }
 
     public void setShipperName(String shipperName) {
@@ -43,7 +43,7 @@ public class Shipment extends Model {
     }
 
     public String getShipperPhoneNumber() {
-        return shipperPhoneNumber;
+        return shipperPhoneNumber = "012356789";
     }
 
     public void setShipperPhoneNumber(String shipperPhoneNumber) {

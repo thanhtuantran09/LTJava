@@ -26,17 +26,17 @@ public class ShipmentPopupView extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        TopBackground = new javax.swing.JPanel();
+        In4 = new javax.swing.JLabel();
+        BotBackground = new javax.swing.JPanel();
         btnOK = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        MidBackground = new javax.swing.JPanel();
+        Namebrand = new javax.swing.JLabel();
+        SđtSp = new javax.swing.JLabel();
+        ShipPrice = new javax.swing.JLabel();
+        Status = new javax.swing.JLabel();
+        NameCs = new javax.swing.JLabel();
         lbCustomerName = new javax.swing.JLabel();
         txtShipperName = new javax.swing.JTextField();
         txtShipperPhoneNumber = new javax.swing.JTextField();
@@ -46,75 +46,75 @@ public class ShipmentPopupView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(400, 50));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        TopBackground.setPreferredSize(new java.awt.Dimension(400, 50));
+        TopBackground.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Thông tin giao hàng");
+        In4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        In4.setText("Thông tin giao hàng");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        jPanel1.add(jLabel1, gridBagConstraints);
+        TopBackground.add(In4, gridBagConstraints);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(TopBackground, java.awt.BorderLayout.PAGE_START);
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(100, 50));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        BotBackground.setPreferredSize(new java.awt.Dimension(100, 50));
+        BotBackground.setLayout(new java.awt.GridBagLayout());
 
         btnOK.setText("OK");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnOK, gridBagConstraints);
+        BotBackground.add(btnOK, gridBagConstraints);
 
         btnCancel.setText("Hủy");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnCancel, gridBagConstraints);
+        BotBackground.add(btnCancel, gridBagConstraints);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(BotBackground, java.awt.BorderLayout.PAGE_END);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        jPanel3.setLayout(new java.awt.GridBagLayout());
+        MidBackground.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        MidBackground.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setText("Tên Shipper:");
+        Namebrand.setText("Hãng:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jLabel2, gridBagConstraints);
+        MidBackground.add(Namebrand, gridBagConstraints);
 
-        jLabel3.setText("SDT Shipper:");
+        SđtSp.setText("SĐT Shipper:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jLabel3, gridBagConstraints);
+        MidBackground.add(SđtSp, gridBagConstraints);
 
-        jLabel4.setText("Giá Ship:");
+        ShipPrice.setText("Giá Ship:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jLabel4, gridBagConstraints);
+        MidBackground.add(ShipPrice, gridBagConstraints);
 
-        jLabel5.setText("Trạng Thái:");
+        Status.setText("Trạng Thái:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jLabel5, gridBagConstraints);
+        MidBackground.add(Status, gridBagConstraints);
 
-        jLabel6.setText("Khách Hàng:");
+        NameCs.setText("Khách Hàng:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(jLabel6, gridBagConstraints);
+        MidBackground.add(NameCs, gridBagConstraints);
 
         lbCustomerName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbCustomerName.setForeground(new java.awt.Color(255, 51, 51));
@@ -125,7 +125,7 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(lbCustomerName, gridBagConstraints);
+        MidBackground.add(lbCustomerName, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -135,7 +135,7 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(txtShipperName, gridBagConstraints);
+        MidBackground.add(txtShipperName, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -145,7 +145,7 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(txtShipperPhoneNumber, gridBagConstraints);
+        MidBackground.add(txtShipperPhoneNumber, gridBagConstraints);
 
         spnShipCost.setModel(new javax.swing.SpinnerNumberModel(0, null, null, 1000));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -157,7 +157,7 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(spnShipCost, gridBagConstraints);
+        MidBackground.add(spnShipCost, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -167,12 +167,12 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(cboStatus, gridBagConstraints);
+        MidBackground.add(cboStatus, gridBagConstraints);
 
         btnSelectCustomer.setText("Chọn");
-        jPanel3.add(btnSelectCustomer, new java.awt.GridBagConstraints());
+        MidBackground.add(btnSelectCustomer, new java.awt.GridBagConstraints());
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+        getContentPane().add(MidBackground, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,19 +221,19 @@ public class ShipmentPopupView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BotBackground;
+    private javax.swing.JLabel In4;
+    private javax.swing.JPanel MidBackground;
+    private javax.swing.JLabel NameCs;
+    private javax.swing.JLabel Namebrand;
+    private javax.swing.JLabel ShipPrice;
+    private javax.swing.JLabel Status;
+    private javax.swing.JLabel SđtSp;
+    private javax.swing.JPanel TopBackground;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnOK;
     private javax.swing.JButton btnSelectCustomer;
     private javax.swing.JComboBox<String> cboStatus;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lbCustomerName;
     private javax.swing.JSpinner spnShipCost;
     private javax.swing.JTextField txtShipperName;

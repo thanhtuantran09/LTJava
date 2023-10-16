@@ -77,13 +77,13 @@ public class SelectCustomerPopupView extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        TopBackGround = new javax.swing.JPanel();
+        NameCs = new javax.swing.JLabel();
+        BotBackground = new javax.swing.JPanel();
         btnOK = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        MidMBackground = new javax.swing.JPanel();
+        MidBackground = new javax.swing.JPanel();
         txtCustomerName = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -91,69 +91,69 @@ public class SelectCustomerPopupView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(429, 40));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        TopBackGround.setPreferredSize(new java.awt.Dimension(429, 40));
+        TopBackGround.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Chọn khách hàng");
-        jPanel1.add(jLabel1, new java.awt.GridBagConstraints());
+        NameCs.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NameCs.setText("Chọn khách hàng");
+        TopBackGround.add(NameCs, new java.awt.GridBagConstraints());
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(TopBackGround, java.awt.BorderLayout.PAGE_START);
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(429, 50));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        BotBackground.setPreferredSize(new java.awt.Dimension(429, 50));
+        BotBackground.setLayout(new java.awt.GridBagLayout());
 
         btnOK.setText("OK");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnOK, gridBagConstraints);
+        BotBackground.add(btnOK, gridBagConstraints);
 
         btnCancel.setText("Cancel");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.weightx = 0.1;
-        jPanel2.add(btnCancel, gridBagConstraints);
+        BotBackground.add(btnCancel, gridBagConstraints);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(BotBackground, java.awt.BorderLayout.PAGE_END);
 
-        jPanel3.setLayout(new java.awt.BorderLayout());
+        MidMBackground.setLayout(new java.awt.BorderLayout());
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 10));
-        jPanel4.setPreferredSize(new java.awt.Dimension(400, 60));
-        jPanel4.setLayout(new java.awt.GridBagLayout());
+        MidBackground.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 10));
+        MidBackground.setPreferredSize(new java.awt.Dimension(400, 60));
+        MidBackground.setLayout(new java.awt.GridBagLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
-        jPanel4.add(txtCustomerName, gridBagConstraints);
+        MidBackground.add(txtCustomerName, gridBagConstraints);
 
         btnSearch.setText("Tìm");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 0);
-        jPanel4.add(btnSearch, gridBagConstraints);
+        MidBackground.add(btnSearch, gridBagConstraints);
 
-        jPanel3.add(jPanel4, java.awt.BorderLayout.PAGE_START);
+        MidMBackground.add(MidBackground, java.awt.BorderLayout.PAGE_START);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 350));
 
         listCustomer.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(listCustomer);
 
-        jPanel3.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        MidMBackground.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
+        getContentPane().add(MidMBackground, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BotBackground;
+    private javax.swing.JPanel MidBackground;
+    private javax.swing.JPanel MidMBackground;
+    private javax.swing.JLabel NameCs;
+    private javax.swing.JPanel TopBackGround;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnOK;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<Customer> listCustomer;
     private javax.swing.JTextField txtCustomerName;

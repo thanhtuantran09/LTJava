@@ -5,8 +5,9 @@ public enum EmployeePermission {
     MANAGER("manager", "Quản lý", 2),
     STAFF("staff", "Nhân viên", 1),
     INACTIVE("inactive", "Nghỉ việc", 0);
-    private String id, name;
-    private int priority;
+    private final String id;
+    private final String name;
+    private final int priority;
 
     EmployeePermission(String id, String name, int priority) {
         this.id = id;
