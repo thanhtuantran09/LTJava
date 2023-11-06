@@ -106,7 +106,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="Namebrand">
           <Properties>
-            <Property name="text" type="java.lang.String" value="H&#xe3;ng:"/>
+            <Property name="text" type="java.lang.String" value="T&#xea;n Shipper:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
