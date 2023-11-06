@@ -78,7 +78,7 @@ public class ShipmentPopupView extends javax.swing.JFrame {
         MidBackground.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
         MidBackground.setLayout(new java.awt.GridBagLayout());
 
-        Namebrand.setText("Hãng:");
+        Namebrand.setText("Tên Shipper:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;

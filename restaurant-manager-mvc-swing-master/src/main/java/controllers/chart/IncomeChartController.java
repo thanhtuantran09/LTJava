@@ -23,7 +23,7 @@ public class IncomeChartController {
         for (Date date : getAllDateBetween(start, end)) {
             Statistical.EmployeeIncome income = findByDate(incomes, date);
             if (income != null) {
-                dataset.addValue(income.totalIncome / 100000, "TN", formatter.format(income.date));
+                dataset.addValue(income.totalIncome , "TN", formatter.format(income.date));
             } else {
                 dataset.addValue(0, "TN", formatter.format(date));
             }
@@ -54,7 +54,7 @@ public class IncomeChartController {
 
     public void show(JPanel panelRoot, Timestamp start, Timestamp end) throws SQLException {
         CategoryDataset dataset = createDataset(start, end);
-        JPanel chartPanel = LineChart.createChartPanel(dataset);
+        JPanel chartPanel = ColumnChart.createChartPanel(dataset);
         panelRoot.removeAll();
         panelRoot.add(chartPanel);
         panelRoot.updateUI();
