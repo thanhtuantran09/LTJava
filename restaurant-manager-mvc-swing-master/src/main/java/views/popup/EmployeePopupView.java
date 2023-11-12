@@ -83,7 +83,7 @@ public class EmployeePopupView extends javax.swing.JFrame implements PopupView {
         lbTitle = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
