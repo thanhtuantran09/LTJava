@@ -73,6 +73,7 @@ public class StatisticalFoodController {
             StatisticalDao statisticalDao = new StatisticalDao();
             ArrayList<Statistical.ProductIncome> list = statisticalDao.getQuantityItemByCategory(new Timestamp(startDate.getTime()), new Timestamp(endDate.getTime()), idCategoryFood);
             view.setTableData(list);
+            view.createPieChart(list);
         } catch (Exception e) {
             //System.out.println("lõi cmnr");
             e.printStackTrace();

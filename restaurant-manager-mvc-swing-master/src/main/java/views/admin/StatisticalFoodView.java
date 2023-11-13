@@ -6,7 +6,11 @@
 package views.admin;
 
 import com.toedter.calendar.JDateChooser;
+import static controllers.TimeCouterController.start;
+import dao.StatisticalDao;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JButton;
@@ -16,6 +20,11 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import models.Statistical;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
 import utils.ErrorPopup;
 
 /**
@@ -27,7 +36,7 @@ public class StatisticalFoodView extends javax.swing.JPanel {
     String[] header = {"Tên Món", "Số lượng đã bán"};
     DefaultTableModel tableModel = new DefaultTableModel(header, 0);
     ArrayList<Statistical.ProductIncome> tableData = new ArrayList<>();
-
+    static StatisticalDao statisticalDao = new StatisticalDao();
     /**
      * Creates new form StatisticalFoodView
      */
@@ -40,7 +49,46 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         ((DefaultTableCellRenderer) tblData.getTableHeader().getDefaultRenderer())
                 .setHorizontalAlignment(JLabel.LEFT);
         tblData.setModel(tableModel);
+        
+        // Initialize the pie chart in the pnlPie panel
+        createPieChart(tableData);
 
+    }
+    
+    public void createPieChart(ArrayList list) {
+        // Create a dataset for the pie chart
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        ArrayList<Statistical.ProductIncome> products = tableData;
+        for (Statistical.ProductIncome product : products) {
+            dataset.setValue(product.name, product.quantity);
+        }
+
+        // Create the pie chart based on the dataset
+        JFreeChart chart = ChartFactory.createPieChart(
+                "Thống kê sản phẩm theo danh mục",  // Chart title
+                dataset,         // Dataset
+                true,            // Include legend
+                true,
+                false);
+
+        PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setBackgroundPaint(Color.WHITE);
+        
+        // Create a chart panel and add it to the pnlPie panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setPreferredSize(new java.awt.Dimension(400, 400));
+        pnlPie.setLayout(new BorderLayout());
+        pnlPie.setPreferredSize(new Dimension(400, 400));
+        
+        // Remove any existing components in pnlPie before adding the chart
+        pnlPie.removeAll();
+
+        // Add the chart panel to pnlPie
+        pnlPie.add(chartPanel);
+
+        // Repaint the panel to reflect the changes
+        pnlPie.revalidate();
+        pnlPie.repaint();
     }
 
     public DefaultTableModel getTableModel() {
@@ -117,6 +165,7 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         cbxCategory = new javax.swing.JComboBox<>();
+        pnlPie = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 228, 225));
         setPreferredSize(new java.awt.Dimension(1008, 680));
@@ -165,13 +214,28 @@ public class StatisticalFoodView extends javax.swing.JPanel {
 
         cbxCategory.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        pnlPie.setBackground(new java.awt.Color(255, 228, 225));
+
+        javax.swing.GroupLayout pnlPieLayout = new javax.swing.GroupLayout(pnlPie);
+        pnlPie.setLayout(pnlPieLayout);
+        pnlPieLayout.setHorizontalGroup(
+            pnlPieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pnlPieLayout.setVerticalGroup(
+            pnlPieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 415, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
+                    .addComponent(pnlPie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2)
@@ -185,23 +249,28 @@ public class StatisticalFoodView extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(startDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(endDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(cbxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(btnEnter)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(startDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(endDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(cbxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(btnEnter)
+                        .addGap(0, 324, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnlPie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -216,6 +285,7 @@ public class StatisticalFoodView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel pnlPie;
     private com.toedter.calendar.JDateChooser startDate;
     private javax.swing.JTable tblData;
     // End of variables declaration//GEN-END:variables
